@@ -6,15 +6,15 @@ let speed = 2;
 let theta;
 function setup() {
   createCanvas(innerWidth, innerHeight);
-  // random distribution
+  // for random distribution
   // only execute draw once
   // noLoop();
-  // draw recangle from centre
+  // draw rectangle from centre
   rectMode(CENTER);
   // angular movement 
   // assign a random angle in radians
   theta = random(TAU)
-  // assign position of point p to middle of screen
+  // assign position of notional point p to middle of screen
   p = {x:width/2, y:height/2}
 }
 
