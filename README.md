@@ -1,1 +1,1 @@
-# p5js2DMaths
+# p5.js 2D Basic Maths Exercises
