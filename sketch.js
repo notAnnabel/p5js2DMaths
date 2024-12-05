@@ -77,9 +77,38 @@ function draw() {
   ////////////////
   // angular velocity
   ////////////////
+  /*
   p.x += cos(theta) * speed;
   p.y += sin(theta) * speed;
   circle(p.x, p.y, pSize)
   ////////////////
+
+  ////////////////
+  // angle from position
+ /* ////////////////
+  let dy = mouseY - p.y; //difference between object (source) and target on y axis
+  let dx = mouseX - p.x; //difference between object (source) and target on x axis
+  // calculate angle between object and mouses
+  theta = atan2(dy, dx);
+  p.x += cos(theta)*speed;
+  p.y += sin(theta)*speed;
+  circle(p.x, p.y, pSize);
+  */
+
+  ////////////////
+  // use cos and sin to draw a circle
+ ////////////////
+ // define raidus of circle
+ const r = 50;
+ // initially set angle (t) as 0
+ //loop through 2 * PI (TAU), adding a little each time
+ for(let t = 0; t < TAU; t += 0.09){
+  let x = (sin(t) * r) + width/2; //offset by x centre point
+  let y = (cos(t) * r) + height/2; //offset by y centre point
+  //draw points
+  circle(x, y, 5)
+ }
+
+ 
 
 }
